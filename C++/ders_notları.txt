@@ -55,3 +55,25 @@ TÜR DÖNÜŞÜMÜ
 - Ondalık kısım atılır; yuvarlama yapılmaz.
 - Örnek: 14.9 -> 14, -14.9 -> -14
 - Dönüştürülen değer hedef türün sınırları içinde olmalıdır.
+BELLEK BOYUTU — sizeof
+- Bir değişkenin veya türün boyutunu bayt cinsinden verir.
+- sizeof(myNumber) ve sizeof(int) kullanılabilir.
+- Mac'te 1 bayt = 8 bittir.
+- Türlerin boyutu sisteme göre değişebilir.
+- sizeof(char) her zaman 1 bayttır.
+- sizeof, değişkenin değerine bağlı değildir:
+  int türündeki 4 ve 4000 aynı miktarda yer kaplar.
+
+BELLEK ADRESİ — &
+- &myNumber, myNumber değişkeninin bellekteki adresini verir.
+- cout << myNumber;  -> Değeri yazdırır.
+- cout << &myNumber; -> Adresi yazdırır.
+- Adres genellikle 0x ile başlayan onaltılık biçimde görünür.
+- Program tekrar çalıştırıldığında adres değişebilir.
+
+STRING İÇİN BOYUT
+- sizeof(myText): string nesnesinin kendi boyutudur.
+- Ek olarak ayrılan metin belleğini kapsamaz.
+- myText.size(): Metindeki char birimi sayısıdır.
+- UTF-8 Türkçe karakterler birden fazla bayt tutabileceğinden,
+  size() sonucu görünen harf sayısıyla aynı olmayabilir.
