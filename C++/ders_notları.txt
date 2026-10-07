@@ -15,3 +15,43 @@ Dosya: 02_yorumlar_kacis_karekterleri.cpp
 - \t : Yatay sekme ekler.
 - \" : Çift tırnak yazdırır.
 - \\ : Ters eğik çizgi yazdırır.
+03 - Değişkenler
+
+Dosya: 03_degiskenler.cpp
+
+DEĞİŞKEN TANIMLAMA
+- Yapı: veri_tipi degisken_adi = deger;
+- Örnek: int yas = 30;
+- = işareti değer atar.
+- Değişkeni okumadan önce ona bir değer verilmelidir.
+
+VERİ TİPLERİ
+- int: Tam sayı.
+- bool: true veya false.
+- char: Tek karakter. Örnek: 'A'
+- float: Ondalıklı sayı. Örnek: 14.2f
+- double: float'tan daha hassas ondalıklı sayı.
+- string: Metin. Örnek: "Merhaba"
+- string kullanırken <string> başlığı eklenir.
+
+FLOAT VE DOUBLE
+- 14.2 gibi ondalıklı sabitlerin varsayılan türü double'dır.
+- 14.2f yazıldığında sabitin türü float olur.
+- Ondalıklı değerler bellekte her zaman tam olarak temsil edilemez.
+
+SABİTLER
+- const: Değerin sonradan değiştirilmesini engeller.
+- Örnek: const float pi = 3.14f;
+
+İŞARETLİ VE İŞARETSİZ SAYILAR
+- signed int: Negatif, sıfır ve pozitif tam sayılar.
+- int ile signed int aynı türdür.
+- unsigned int: Sıfır ve pozitif tam sayılar.
+- Her türün tutabileceği değerlerin bir sınırı vardır.
+
+TÜR DÖNÜŞÜMÜ
+- static_cast<hedef_tur>(deger) kullanılır.
+- Örnek: static_cast<int>(14.2f) sonucu 14 olur.
+- Ondalık kısım atılır; yuvarlama yapılmaz.
+- Örnek: 14.9 -> 14, -14.9 -> -14
+- Dönüştürülen değer hedef türün sınırları içinde olmalıdır.
