@@ -40,5 +40,30 @@ int main()
     cout << "Float degeri: " << floatNumber << '\n';
     cout << "Int degeri: " << buffer << '\n';
 
+    // 6. BELLEKTE KAPLADIĞI ALAN VE ADRESİ
+    // sizeof: Bir türün veya değişkenin boyutunu bayt cinsinden verir.
+    // &     : Değişkenin bellekteki adresini verir.
+
+    cout << "\n--- Bellek boyutlari ---\n";
+
+    cout << "int: " << sizeof(myNumber) << " bayt\n";
+    cout << "bool: " << sizeof(myCheck) << " bayt\n";
+    cout << "char: " << sizeof(myChar) << " bayt\n";
+    cout << "float: " << sizeof(floatNumber) << " bayt\n";
+    cout << "double: " << sizeof(doubleNumber) << " bayt\n";
+
+    // Değişken yerine doğrudan tür adı da yazılabilir.
+    cout << "sizeof(int): " << sizeof(int) << " bayt\n";
+
+    cout << "\n--- Deger ve adres ---\n";
+
+    cout << "Deger: " << myNumber << '\n';
+    cout << "Adres: " << &myNumber << '\n';
+    cout << "Boyut: " << sizeof(myNumber) << " bayt\n";
+
+    // string nesnesinin boyutu ile metnin uzunluğu farklıdır.
+    cout << "\nstring nesnesi: " << sizeof(myText) << " bayt\n";
+    cout << "Metnin uzunlugu: " << myText.size() << " char birimi\n";
+
     return 0; // Programın başarıyla tamamlandığını belirtir
 }
