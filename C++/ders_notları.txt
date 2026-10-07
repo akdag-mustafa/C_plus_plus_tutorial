@@ -1,0 +1,17 @@
+C++ DERS NOTLARI
+
+01 - Çıktı Üretme
+Dosya: 01_cikti_uretme.cpp
+- cout: Ekrana çıktı verir.
+- endl: Alt satıra geçer ve çıktı tamponunu boşaltır.
+- main(): Programın çalışmaya başladığı fonksiyondur.
+- std:: Standart kütüphanenin isim alanını belirtir.
+
+02 - Yorumlar ve Kaçış Karakterleri
+Dosya: 02_yorumlar_kacis_karekterleri.cpp
+- // : Tek satırlık yorum.
+- /* ... */ : Çok satırlık yorum.
+- \n : Alt satıra geçer.
+- \t : Yatay sekme ekler.
+- \" : Çift tırnak yazdırır.
+- \\ : Ters eğik çizgi yazdırır.
