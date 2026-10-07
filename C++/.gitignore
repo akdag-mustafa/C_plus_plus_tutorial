@@ -1,0 +1,4 @@
+program
+*.o
+*.dSYM/
+.DS_Store
