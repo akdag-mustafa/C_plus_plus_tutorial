@@ -77,3 +77,29 @@ STRING İÇİN BOYUT
 - myText.size(): Metindeki char birimi sayısıdır.
 - UTF-8 Türkçe karakterler birden fazla bayt tutabileceğinden,
   size() sonucu görünen harf sayısıyla aynı olmayabilir.
+
+  04 - Kullanıcıdan Veri Alma
+
+CIN
+- cin >> degisken; ile kullanıcıdan veri alınır.
+- >>, giriş akışından değeri değişkene aktarır.
+- Sayı okunurken değişkenin türüne uygun giriş yapılmalıdır.
+- string okunurken boşluk, sekme veya satır sonunda durur.
+- Okunmayan kısım girişte kalır.
+
+GETLINE
+- getline(cin, metin); bir satırı boşluklarıyla birlikte okur.
+- Satır sonunu girişten alır ama metne eklemez.
+- cin >> sonrasında kalan Enter, getline'ın boş okumasına yol açabilir.
+
+WS
+- getline(cin >> ws, metin); şeklinde kullanılabilir.
+- ws, girişteki baştaki boşlukları, sekmeleri ve satır sonlarını atlar.
+- Metnin arasındaki boşlukları silmez.
+- Baştaki boşlukları korumak veya boş satır almak isteniyorsa
+  bu yöntem uygun değildir.
+
+DAİRE HESABI
+- Alan: pi * r * r
+- Çevre: 2 * pi * r
+- Ondalıklı yarıçap almak için float veya double kullanılabilir.
