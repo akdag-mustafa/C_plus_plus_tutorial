@@ -79,5 +79,17 @@ int main()
 
     cout << "Son x degeri: " << x << '\n';
 
+    // mantıksal operatörler
+
+    int k = 7, l = 7;
+
+    cout << (l == k) << endl;
+    cout << (l < k) << endl;
+    cout << (l <= k) << endl;
+    cout << (l > k) << endl;
+    cout << (l >= k) << endl;
+    cout << (l != k && l < k) << endl;
+    cout << (l != k || l < k) << endl;
+
     return 0;
 }
