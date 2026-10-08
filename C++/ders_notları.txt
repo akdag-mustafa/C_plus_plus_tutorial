@@ -103,3 +103,96 @@ DAİRE HESABI
 - Alan: pi * r * r
 - Çevre: 2 * pi * r
 - Ondalıklı yarıçap almak için float veya double kullanılabilir.
+
+05 - Operatörler
+Dosya: 05_operatorler.cpp
+
+ARİTMETİK OPERATÖRLER
+- + : Toplama
+- - : Çıkarma
+- * : Çarpma
+- / : Bölme
+- % : Tam sayılarda bölümden kalanı bulma
+- İki int bölünürse ondalık kısım atılır: 18 / 5 = 3
+- static_cast<float>(18) / 5 sonucu 3.6 olur.
+- Bölen sıfır olmamalıdır.
+
+ARTIRMA VE AZALTMA
+- ++ : Değeri 1 artırır.
+- -- : Değeri 1 azaltır.
+- Ön ek ve son ek arasındaki fark:
+
+  int a = 5;
+  int b = ++a;
+  Sonuç: a = 6, b = 6 (önce artır, yeni değeri kullan)
+
+  int a = 5;
+  int b = a++;
+  Sonuç: a = 6, b = 5 (eski değeri kullan, artır)
+
+- Aynı ayrım --a ve a-- için de geçerlidir.
+
+BİLEŞİK ATAMA
+- x += 3; -> x = x + 3;
+- x -= 3; -> x = x - 3;
+- x *= 3; -> x = x * 3;
+- x /= 3; -> x = x / 3;
+- x %= 3; -> x = x % 3;
+
+BİTSEL OPERATÖRLER
+- Tam sayıların bitleri üzerinde işlem yapar.
+- & : AND — İki bit de 1 ise 1.
+- | : OR  — En az bir bit 1 ise 1.
+- ^ : XOR — Bitler farklıysa 1. Üs alma değildir.
+- >> : Bitleri sağa kaydırır.
+- << : Bitleri sola kaydırır.
+- &=, |=, ^=, >>=, <<= sonuçları değişkene atar.
+- İşaretsiz türler bit işlemleri için daha anlaşılırdır.
+- Kaydırma miktarı negatif veya türün bit sayısına
+  eşit/büyük olmamalıdır.
+- Sola kaydırmada türün sınırından çıkan bitler kaybolabilir.
+
+SEMBOLLERİN BAĞLAMA GÖRE ANLAMI
+- &x     : x'in adresini alır.
+- x & y  : Bitsel AND yapar.
+- cout << x : Çıktı verir.
+- cin >> x  : Girdi alır.
+- x << 1 veya x >> 1 : Bit kaydırır.
+06 - Switch-Case ile Hesap Makinesi
+
+KULLANICIDAN VERİ ALMA
+- float a, b; iki ondalıklı sayı değişkeni tanımlar.
+- cin >> a >> b; sırayla iki sayıyı okur.
+- Sayılar arasında boşluk veya Enter kullanılabilir.
+- char i; işlem sembolünü tek karakter olarak tutar.
+- cin >> i; kullanıcının girdiği +, -, *, / sembolünü alır.
+
+SWITCH-CASE
+- Bir ifadenin değerine göre farklı kodlar çalıştırır.
+- switch(i), i değişkeninin değerini kontrol eder.
+- case '+': yalnızca i'nin değeri '+' ise o noktadan çalışır.
+- case etiketindeki karakterler tek tırnakla yazılır.
+- case ('+'): geçerlidir; parantez zorunlu değildir.
+- Bu örnekte her case, ilgili işlemi yapıp sonucu yazdırır.
+
+BREAK
+- switch bloğundan çıkmayı sağlar.
+- Yazılmazsa sonraki case'in içindeki kodlar da çalışır.
+- Sonraki case'in eşleşmesi tekrar kontrol edilmez.
+
+DEFAULT
+- Hiçbir case eşleşmezse çalışır.
+- Kullanıcı geçersiz bir işlem sembolü girdiğinde kullanılabilir.
+- Zorunlu değildir; bu kodda olmadığı için geçersiz sembolde
+  hiçbir sonuç yazdırılmaz.
+
+SIFIRA BÖLME KONTROLÜ
+- Bölme işleminden önce b'nin sıfır olup olmadığı kontrol edilmelidir.
+- b sıfırsa işlem yapılmamalı, uyarı verilmelidir.
+
+SWITCH HANGİ TÜRLERLE KULLANILIR?
+- Bu örnekte char ile kullanıldı.
+- int gibi tam sayı türleri ve enum türleriyle de kullanılabilir.
+- float, double ve string doğrudan switch koşulu olamaz.
+- a ve b'nin float olması sorun değildir:
+  switch ile kontrol edilen değişken i'dir.

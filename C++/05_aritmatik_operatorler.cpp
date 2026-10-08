@@ -90,6 +90,5 @@ int main()
     cout << (l >= k) << endl;
     cout << (l != k && l < k) << endl;
     cout << (l != k || l < k) << endl;
-
     return 0;
 }

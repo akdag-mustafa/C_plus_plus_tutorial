@@ -24,6 +24,9 @@ int main()
     case ('/'):
         cout << "result:" << a / b << endl;
         break;
+    default:
+        cout << "Gecersiz operator!\n";
+        break;
     }
 
     return 0;
