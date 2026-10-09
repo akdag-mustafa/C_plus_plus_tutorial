@@ -234,3 +234,47 @@ b = 1 NEDEN DÖNGÜNÜN İÇİNDE?
 < VE <= FARKI
 - i < 5: 5 dahil değildir.
 - a <= 10: 10 dahildir.
+08 - Do-While, For ve Continue
+
+DO-WHILE
+- Önce döngü gövdesi çalışır, sonra koşul kontrol edilir.
+- Bu nedenle koşul yanlış olsa bile en az bir kez çalışır.
+- while ise koşulu baştan kontrol eder.
+
+KODDAKİ ÇALIŞMA SIRASI
+- number başlangıçta 20'dir.
+- Ekrana 20 yazdırılır.
+- number++ ile değer 21 olur.
+- 21 < 10 yanlış olduğu için döngü biter.
+- do-while sonundaki while (koşul); noktalı virgülle biter.
+
+FOR DÖNGÜSÜ
+- Yapısı: for (başlangıç; koşul; güncelleme)
+- for (int i = 0; i < number; i++)
+  1. i = 0 yalnızca başlangıçta çalışır.
+  2. Her turdan önce i < number kontrol edilir.
+  3. Koşul doğruysa döngü gövdesi çalışır.
+  4. i++ çalışır ve yeniden koşula dönülür.
+- number artık 21 olduğu için i, 0'dan 20'ye kadar ilerler.
+
+CONTINUE
+- Bulunulan turun kalan kısmını atlar.
+- Döngüyü tamamen bitirmez.
+- for döngüsünde continue sonrası güncelleme (i++) çalışır,
+  ardından koşul yeniden kontrol edilir.
+- Bu kodda i == 6 olduğunda cout satırı atlanır.
+- Ekrana i + 1 yazdırıldığı için atlanan sayı 7'dir.
+
+BREAK İLE FARKI
+- continue: Yalnızca mevcut turun kalanını atlar.
+- break: İçinde bulunduğu döngüyü tamamen bitirir.
+
+SÜSLÜ PARANTEZ
+- if sonrasında süslü parantez yoksa yalnızca sıradaki
+  tek ifade if'e bağlıdır.
+- Burada sadece continue; if koşuluna bağlıdır.
+
+ÇIKTI
+- İlk satır: 20
+- İkinci satır: 1 2 3 4 5 6 8 9 ... 20 21
+- \t, değerler arasına yatay sekme ekler.
