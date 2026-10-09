@@ -196,3 +196,41 @@ SWITCH HANGİ TÜRLERLE KULLANILIR?
 - float, double ve string doğrudan switch koşulu olamaz.
 - a ve b'nin float olması sorun değildir:
   switch ile kontrol edilen değişken i'dir.
+  07 - While Döngüsü ve İç İçe Döngüler
+
+WHILE DÖNGÜSÜ
+- Koşul doğru olduğu sürece içindeki kodları tekrar çalıştırır.
+- Koşul her turdan önce kontrol edilir.
+- Başlangıçta koşul yanlışsa döngü hiç çalışmaz.
+
+İLK ÖRNEK
+- int i = 0; başlangıç değerini belirler.
+- while (i < 5) döngüyü i, 5'ten küçükken çalıştırır.
+- cout, i'nin değerini ekrana yazdırır.
+- i++; her turda i'yi 1 artırır.
+- Çıktı: 0, 1, 2, 3, 4
+- i, 5 olduğunda koşul yanlış olur ve döngü biter.
+- Bu örnekte i++ kaldırılırsa i hep 0 kalır ve döngü bitmez.
+
+İÇ İÇE WHILE — ÇARPIM TABLOSU
+- Dış döngünün sayacı a, iç döngünün sayacı b'dir.
+- a, tablodaki satırı; b, o satırdaki çarpanları belirler.
+- a sabitken b, 1'den 10'a kadar ilerler.
+- İç döngü bitince alt satıra geçilir ve a artırılır.
+- Dış döngünün her turunda b = 1; ile iç sayaç sıfırlanır.
+  Burada sıfırlamak, başlangıç değeri olan 1'e döndürmektir.
+
+b = 1 NEDEN DÖNGÜNÜN İÇİNDE?
+- İlk satır tamamlandığında b'nin değeri 11 olur.
+- Yeni satırda b tekrar 1 yapılmazsa b <= 10 koşulu
+  yanlış kalır ve iç döngü sonraki satırlarda çalışmaz.
+
+ÇALIŞMA SIRASI
+- a = 1: 1*1, 1*2, ... 1*10 yazdırılır.
+- a = 2: 2*1, 2*2, ... 2*10 yazdırılır.
+- Bu işlem a = 10 satırı tamamlanana kadar sürer.
+- Toplam 10 × 10 = 100 çarpım sonucu yazdırılır.
+
+< VE <= FARKI
+- i < 5: 5 dahil değildir.
+- a <= 10: 10 dahildir.
