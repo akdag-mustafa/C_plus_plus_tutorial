@@ -278,3 +278,107 @@ SÜSLÜ PARANTEZ
 - İlk satır: 20
 - İkinci satır: 1 2 3 4 5 6 8 9 ... 20 21
 - \t, değerler arasına yatay sekme ekler.
+
+C++ STRING FONKSİYONLARI
+Başlık: <string>
+
+UZUNLUK VE KAPASİTE
+- size(): Metnin uzunluğunu verir.
+- length(): size() ile aynı işi yapar.
+- empty(): Metin boşsa true döndürür.
+- capacity(): Yeniden bellek ayırmadan tutulabilecek char sayısını verir.
+- max_size(): Teorik olarak desteklenen en büyük uzunluğu verir.
+- reserve(n): Kapasitenin en az n olması için yer ayırır; uzunluğu değiştirmez.
+- shrink_to_fit(): Kullanılmayan kapasitenin azaltılmasını ister; garanti değildir.
+- resize(n): Uzunluğu n yapar. Kısaltır veya '\0' ile genişletir.
+- resize(n, karakter): Genişletirken belirtilen karakteri ekler.
+
+KARAKTERLERE ERİŞİM
+- at(indeks): Karaktere erişir; sınır dışındaysa istisna oluşturur.
+- operator[]: İndeksle erişir; at() gibi sınır kontrolü yapmaz.
+- front(): İlk karaktere erişir.
+- back(): Son karaktere erişir.
+- front() ve back() için metin boş olmamalıdır.
+
+EKLEME VE DEĞİŞTİRME
+- append(): Sona metin ekler.
+- operator+=: Sona metin veya karakter ekler.
+- push_back(): Sona tek karakter ekler.
+- insert(): Belirtilen konuma metin veya karakter ekler.
+- assign(): Mevcut içeriği verilen içerikle değiştirir.
+- operator=: Yeni içerik atar.
+- replace(): Belirtilen bölümü başka içerikle değiştirir.
+- swap(): İki string'in içeriklerini değiş tokuş eder.
+
+SİLME
+- clear(): Tüm karakterleri siler; uzunluk 0 olur.
+- erase(): Belirtilen karakterleri veya bölümü siler.
+- pop_back(): Son karakteri siler; metin boş olmamalıdır.
+- Silme işlemleri kapasiteyi mutlaka küçültmez.
+
+ARAMA
+- find(): Baştan arar; ilk eşleşmenin indeksini verir.
+- rfind(): Sondan arar; son eşleşmenin indeksini verir.
+- find_first_of(): Verilen karakterlerden herhangi birinin
+  ilk bulunduğu indeksi verir.
+- find_last_of(): Verilen karakterlerden herhangi birinin
+  son bulunduğu indeksi verir.
+- find_first_not_of(): Verilen karakterlerden olmayan
+  ilk karakterin indeksini verir.
+- find_last_not_of(): Verilen karakterlerden olmayan
+  son karakterin indeksini verir.
+- Arama sonuç bulunamazsa string::npos döndürür.
+- string::npos bir fonksiyon değil, özel sabit değerdir.
+
+PARÇA ALMA VE KARŞILAŞTIRMA
+- substr(): Belirtilen bölümden yeni bir string oluşturur.
+- compare(): Sözlüksel karşılaştırma yapar.
+  Sonuç negatifse önce, 0 ise eşit, pozitifse sonra gelir.
+- == ve !=: İçerik eşitliğini veya farklılığını kontrol eder.
+- <, >, <=, >=: Sözlüksel sıralamayı karşılaştırır.
+- operator+: Metinleri birleştirerek yeni string oluşturur.
+
+C TİPİ METİN VE KOPYALAMA
+- c_str(): Sonunda '\0' bulunan karakter dizisine
+  salt okunur erişim sağlar.
+- data(): İç karakter belleğine erişim sağlar.
+- copy(): Belirtilen bölümü bir char dizisine kopyalar.
+  Sonuna otomatik olarak '\0' eklemez.
+
+İTERATÖRLER
+- begin(): İlk karakteri gösteren iteratörü verir.
+- end(): Son karakterden sonraki konumu verir.
+- rbegin(): Ters yönde dolaşmak için son karakterden başlar.
+- rend(): Ters dolaşımın bitiş konumunu verir.
+- cbegin(), cend(): Karakterlerin değiştirilmesine izin
+  vermeyen başlangıç ve bitiş iteratörlerini verir.
+- crbegin(), crend(): Salt okunur ters iteratörleri verir.
+
+YENİ STANDARTLARDA EKLENENLER
+- starts_with(): Belirtilen içerikle başlıyor mu? (C++20)
+- ends_with(): Belirtilen içerikle bitiyor mu? (C++20)
+- contains(): Belirtilen metni veya karakteri içeriyor mu? (C++23)
+- resize_and_overwrite(): Uzunluğu ve içeriği verilen
+  işlem fonksiyonu üzerinden düzenler. (C++23)
+
+STRING İLE KULLANILAN BAĞIMSIZ FONKSİYONLAR
+- getline(): Bir satırı boşluklarıyla birlikte okur.
+- stoi(): String'i int türüne dönüştürür.
+- stol(): String'i long türüne dönüştürür.
+- stoll(): String'i long long türüne dönüştürür.
+- stoul(): String'i unsigned long türüne dönüştürür.
+- stoull(): String'i unsigned long long türüne dönüştürür.
+- stof(): String'i float türüne dönüştürür.
+- stod(): String'i double türüne dönüştürür.
+- stold(): String'i long double türüne dönüştürür.
+- to_string(): Sayıyı string'e dönüştürür.
+- erase(): Belirtilen değerdeki karakterleri siler. (C++20)
+- erase_if(): Verilen koşulu sağlayan karakterleri siler. (C++20)
+
+TEMEL NOTLAR
+- İndeksler 0'dan başlar.
+- size() ve length(), görünen harfleri değil char birimlerini sayar.
+- UTF-8'de bir Türkçe harf birden fazla char birimi tutabilir.
+- isalpha(), isdigit() gibi <cctype> fonksiyonları string
+  üyesi değildir; tek karakter üzerinde çalışır.
+- setlocale() bir string fonksiyonu değildir.
